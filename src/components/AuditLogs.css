@@ -1,0 +1,301 @@
+.audit-dashboard {
+  padding: 32px;
+  max-width: 1526.4px; /* Total max-width of dashboard */
+  margin: 0 auto;
+  font-family: var(--font-family-main);
+  color: var(--text-main);
+}
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.audit-header-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #314158;
+  margin: 0 0 4px 0;
+}
+.audit-header-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+.btn-export {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #00A6F4;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-export:hover {
+  background-color: #008ae6;
+}
+/* Filters Section */
+.audit-filters-container {
+  width: 1222.4px;
+  height: 91.2px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card, 16.4px);
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.filter-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 18px;
+}
+.filter-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #0F172B;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.filter-input.with-icon {
+  padding-left: 36px;
+}
+.filter-input:focus {
+  border-color: #00A6F4;
+}
+/* Statistics Cards Section */
+.audit-stats-container {
+  display: flex;
+  gap: 24px;
+  width: 1222.4px;
+  height: 117.6px;
+  margin-bottom: 24px;
+}
+.audit-stat-card {
+  flex: 1;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card, 16.4px);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.audit-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.audit-stat-icon {
+  font-size: 18px;
+}
+.audit-stat-icon.total { color: #00A6F4; }
+.audit-stat-icon.success { color: #00A63E; }
+.audit-stat-icon.failed { color: #E7000B; }
+.audit-stat-icon.alerts { color: #F59E0B; }
+.audit-stat-title {
+  font-size: 14px;
+  color: #314158;
+  font-weight: 500;
+}
+.audit-stat-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0F172B;
+  line-height: 1;
+}
+.audit-stat-value.failed { color: #E7000B; }
+.audit-stat-value.success { color: #00A63E; }
+.audit-stat-value.alerts { color: #F59E0B; }
+/* Table Section */
+.audit-table-container {
+  width: 1222.4px;
+  height: 592px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card, 16.4px);
+  padding: 0;
+  overflow: hidden; /* Strict container size */
+  margin-bottom: 24px;
+}
+.audit-table-responsive {
+  width: 100%;
+  padding: 0 24px;
+}
+.audit-table {
+  width: 1172.8px; /* Strict row width */
+  border-collapse: collapse;
+  text-align: left;
+}
+.audit-table th {
+  padding: 16px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #314158;
+  border-bottom: 1px solid var(--border-color);
+}
+.audit-table td {
+  padding: 0 8px;
+  height: 64.8px; /* Strict row height */
+  font-size: 14px;
+  color: #0F172B;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+.audit-timestamp {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #314158;
+}
+/* Role Badges */
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.role-badge.doctor,
+.role-badge.pharmacist {
+  background-color: #E0F2FE;
+  color: #0284C7;
+}
+.role-badge.nurse {
+  background-color: #E0E7FF;
+  color: #4F46E5;
+}
+.role-badge.admin,
+.role-badge.lab {
+  background-color: #DBEAFE;
+  color: #2563EB;
+}
+.role-badge.na {
+  background-color: #F1F5F9;
+  color: #64748B;
+}
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+.status-badge.success {
+  background-color: #DCFCE7;
+  color: #00A63E;
+}
+.status-badge.failed {
+  background-color: #FEE2E2;
+  color: #E7000B;
+}
+/* View Button */
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: #F1F5F9;
+  color: #314158;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-view:hover {
+  background-color: #E2E8F0;
+}
+/* Compliance Section */
+.compliance-container {
+  width: 1222.4px;
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 24px;
+}
+.compliance-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1D4ED8;
+  margin-bottom: 16px;
+}
+.compliance-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #2563EB;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.compliance-list li {
+  margin-bottom: 4px;
+}
+/* Responsiveness */
+@media (max-width: 1366px) {
+  .audit-filters-container,
+  .audit-stats-container,
+  .audit-table-container,
+  .compliance-container {
+    width: 100%;
+  }
+  .audit-table-responsive {
+    overflow-x: auto;
+  }
+  .audit-table {
+    min-width: 1000px;
+  }
+}
+@media (max-width: 1024px) {
+  .audit-stats-container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .audit-stat-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+  .audit-filters-container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .audit-dashboard {
+    padding: 16px;
+  }
+  .audit-stat-card {
+    flex: 0 0 100%;
+  }
+  .audit-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
