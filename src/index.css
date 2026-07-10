@@ -15,7 +15,7 @@
   --text-main: #0F172B;
   --text-body: #314158;
   --text-muted: #64748b;
-  --font-family-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-base: "Google Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --dashboard-max-width: 1526px;
   --sidebar-width: 256px;
   --header-height: 64px;
@@ -23,7 +23,7 @@
 }
 body {
   margin: 0;
-  font-family: var(--font-family-main);
+  font-family: var(--font-base);
   background-color: var(--bg-main);
   color: var(--text-main);
 }

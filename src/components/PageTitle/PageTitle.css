@@ -1,0 +1,50 @@
+.dashboard-header {
+  margin-bottom: 24px;
+}
+.dashboard-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+.dashboard-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.audit-header-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #314158;
+  margin: 0 0 4px 0;
+}
+.audit-header-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.settings-title h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+.settings-title p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}

@@ -8,104 +8,65 @@ import {
   RiEyeLine,
   RiShieldCheckLine
 } from 'react-icons/ri';
+import PageTitle from '../../../components/PageTitle/PageTitle';
+import Button from '../../../common/Button/Button';
+import SearchInput from '../../../components/SearchInput/SearchInput';
+import Card from '../../../components/Card/Card';
+import DataTable from '../../../common/DataTable/DataTable';
+import StatusBadge from '../../../components/StatusBadge/StatusBadge';
 import './AuditLogs.css';
-const mockLogs = [
-  {
-    id: 'log-1',
-    date: '2026-01-03', time: '14:35:22', user: 'Dr. James Wilson', role: 'Doctor', roleClass: 'doctor',
-    action: 'Patient Record Access', target: 'PAT001 - John Anderson', ip: '192.168.1.105', status: 'success'
-  },
-  {
-    id: 'log-2',
-    date: '2026-01-03', time: '14:32:18', user: 'Jennifer Thompson', role: 'Nurse', roleClass: 'nurse',
-    action: 'Vitals Entry', target: 'PAT005 - Sarah Williams', ip: '192.168.1.112', status: 'success'
-  },
-  {
-    id: 'log-3',
-    date: '2026-01-03', time: '14:28:45', user: 'Admin User', role: 'Admin', roleClass: 'admin',
-    action: 'User Creation', target: 'USR045 - New Doctor', ip: '192.168.1.100', status: 'success'
-  },
-  {
-    id: 'log-4',
-    date: '2026-01-03', time: '14:25:12', user: 'Robert Martinez', role: 'Pharmacist', roleClass: 'pharmacist',
-    action: 'Medication Dispensing', target: 'RX-2026-0234', ip: '192.168.1.120', status: 'success'
-  },
-  {
-    id: 'log-5',
-    date: '2026-01-03', time: '14:20:33', user: 'Unknown User', role: 'N/A', roleClass: 'na',
-    action: 'Failed Login Attempt', target: 'admin@hospital.com', ip: '203.45.12.88', status: 'failed'
-  },
-  {
-    id: 'log-6',
-    date: '2026-01-03', time: '14:15:28', user: 'Admin User', role: 'Admin', roleClass: 'admin',
-    action: 'Permission Change', target: 'DOC002 - Dr. Sarah Johnson', ip: '192.168.1.100', status: 'success'
-  },
-  {
-    id: 'log-7',
-    date: '2026-01-03', time: '14:10:15', user: 'Dr. Michael Lee', role: 'Lab Technician', roleClass: 'lab',
-    action: 'Lab Result Publication', target: 'LAB-2026-0892', ip: '192.168.1.130', status: 'success'
-  }
-];
+import { mockLogs } from '../../../data/analytics/auditLogs.data.js';
 const AuditLogs = () => {
   return (
     <div className="audit-dashboard">
-      <div className="audit-header">
+      <PageTitle variant="audit">
         <div className="audit-header-content">
           <h1>Audit Logs</h1>
           <p>Comprehensive system activity and security audit trail</p>
         </div>
-        <button className="btn-export">
+        <Button variant="export">
           <RiDownloadLine /> Export Audit Report
-        </button>
-      </div>
+        </Button>
+      </PageTitle>
       <div className="audit-filters-container">
-        <div className="filter-input-wrapper">
-          <RiSearchLine className="search-icon" />
-          <input type="text" className="filter-input with-icon" placeholder="Search logs..." />
-        </div>
-        <div className="filter-input-wrapper">
-          <input type="text" className="filter-input" placeholder="" />
-        </div>
-        <div className="filter-input-wrapper">
-          <input type="text" className="filter-input" placeholder="" />
-        </div>
-        <div className="filter-input-wrapper">
-          <input type="text" className="filter-input" placeholder="" />
-        </div>
+        <SearchInput icon={true} placeholder="Search logs..." />
+        <SearchInput placeholder="" />
+        <SearchInput placeholder="" />
+        <SearchInput placeholder="" />
       </div>
       <div className="audit-stats-container">
-        <div className="audit-stat-card">
+        <Card variant="audit-stat">
           <div className="audit-stat-header">
             <RiPulseLine className="audit-stat-icon total" />
             <span className="audit-stat-title">Total Events (24h)</span>
           </div>
           <div className="audit-stat-value">1,247</div>
-        </div>
-        <div className="audit-stat-card">
+        </Card>
+        <Card variant="audit-stat">
           <div className="audit-stat-header">
             <RiCheckboxCircleLine className="audit-stat-icon success" />
             <span className="audit-stat-title">Successful</span>
           </div>
           <div className="audit-stat-value success">1,238</div>
-        </div>
-        <div className="audit-stat-card">
+        </Card>
+        <Card variant="audit-stat">
           <div className="audit-stat-header">
             <RiCloseCircleLine className="audit-stat-icon failed" />
             <span className="audit-stat-title">Failed</span>
           </div>
           <div className="audit-stat-value failed">9</div>
-        </div>
-        <div className="audit-stat-card">
+        </Card>
+        <Card variant="audit-stat">
           <div className="audit-stat-header">
             <RiErrorWarningLine className="audit-stat-icon alerts" />
             <span className="audit-stat-title">Security Alerts</span>
           </div>
           <div className="audit-stat-value alerts">2</div>
-        </div>
+        </Card>
       </div>
       <div className="audit-table-container">
         <div className="audit-table-responsive">
-          <table className="audit-table">
+          <DataTable variant="audit">
             <thead>
               <tr>
                 <th>Timestamp</th>
@@ -129,27 +90,27 @@ const AuditLogs = () => {
                   </td>
                   <td>{log.user}</td>
                   <td>
-                    <span className={`role-badge ${log.roleClass}`}>
+                    <StatusBadge variant="role" type={log.roleClass}>
                       {log.role}
-                    </span>
+                    </StatusBadge>
                   </td>
                   <td>{log.action}</td>
                   <td>{log.target}</td>
                   <td>{log.ip}</td>
                   <td>
-                    <span className={`status-badge ${log.status}`}>
+                    <StatusBadge variant="status" type={log.status}>
                       {log.status}
-                    </span>
+                    </StatusBadge>
                   </td>
                   <td>
-                    <button className="btn-view">
+                    <Button variant="view">
                       <RiEyeLine /> View
-                    </button>
+                    </Button>
                   </td>
                 </tr>
               ))}
             </tbody>
-          </table>
+          </DataTable>
         </div>
       </div>
       <div className="compliance-container">

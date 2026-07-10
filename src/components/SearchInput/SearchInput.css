@@ -1,0 +1,24 @@
+.filter-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+.filter-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0F172B;
+  background-color: var(--bg-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.filter-input.with-icon {
+  padding-left: 36px;
+}

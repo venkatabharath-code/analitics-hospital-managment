@@ -1,9 +1,9 @@
 .settings-dashboard {
   padding: 32px;
-  max-width: 1526px;
-  min-height: 1058px;
+  max-width: var(--dashboard-max-width, 1526px);
   margin: 0 auto;
-  font-family: var(--font-family-main);
+  min-height: 100vh;
+  font-family: var(--font-base);
   color: var(--text-main);
 }
 .settings-header {

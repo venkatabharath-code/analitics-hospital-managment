@@ -2,7 +2,7 @@
   padding: 32px;
   max-width: 1526.4px; /* Total max-width of dashboard */
   margin: 0 auto;
-  font-family: var(--font-family-main);
+  font-family: var(--font-base);
   color: var(--text-main);
 }
 .audit-header {

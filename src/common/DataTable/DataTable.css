@@ -1,0 +1,75 @@
+.table-container {
+  width: 1222.4px;
+  height: 348.8px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card, 16.4px);
+  padding: 24px;
+  overflow: hidden;
+}
+.table-container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 24px 0;
+}
+.table-responsive {
+  width: 100%;
+}
+.performance-table {
+  width: 1172.8px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.performance-table th {
+  padding: 0 20px;
+  height: 48px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+}
+.performance-table td {
+  padding: 0 20px;
+  height: 51.6px;
+  font-size: 14px;
+  color: var(--text-body);
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.audit-table-container {
+  width: 1222.4px;
+  height: 592px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card, 16.4px);
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.audit-table-responsive {
+  width: 100%;
+  padding: 0 24px;
+}
+.audit-table {
+  width: 1172.8px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.audit-table th {
+  padding: 16px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #314158;
+  border-bottom: 1px solid var(--border-color);
+}
+.audit-table td {
+  padding: 0 8px;
+  height: 64.8px;
+  font-size: 14px;
+  color: #0F172B;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}

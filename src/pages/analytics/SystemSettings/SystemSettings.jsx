@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { settingsService } from '../services/settingsService';
-import { useToast } from '../context/ToastContext';
+import { settingsService } from '../../../services/settingsService';
+import { useToast } from '../../../components/Toast/Toast';
 import { RiCheckLine } from 'react-icons/ri';
+import PageTitle from '../../../components/PageTitle/PageTitle';
+import Card from '../../../components/Card/Card';
+import Button from '../../../common/Button/Button';
 import './SystemSettings.css';
 const SystemSettings = () => {
   const { showToast } = useToast();
@@ -28,15 +31,15 @@ const SystemSettings = () => {
   };
   return (
     <div className="settings-dashboard">
-      <div className="settings-header">
+      <PageTitle variant="settings">
         <div className="settings-title">
           <h1>System Settings</h1>
           <p>Configure hospital-wide system preferences</p>
         </div>
-      </div>
+      </PageTitle>
       <div className="settings-grid">
         {/* General Settings */}
-        <div className="settings-card">
+        <Card variant="settings">
           <h2>General Settings</h2>
           <div className="form-group">
             <label className="form-label">Hospital Name</label>
@@ -72,9 +75,9 @@ const SystemSettings = () => {
               <option value="YYYY-MM-DD">YYYY-MM-DD</option>
             </select>
           </div>
-        </div>
+        </Card>
         {/* Security Settings */}
-        <div className="settings-card">
+        <Card variant="settings">
           <h2>Security Settings</h2>
           <div className="setting-item-box">
             <span className="setting-item-box-title">Enforce 2-Factor Authentication</span>
@@ -102,9 +105,9 @@ const SystemSettings = () => {
               value={settings.failedLoginAttempts}
               onChange={handleChange}/>
           </div>
-        </div>
+        </Card>
         {/* Billing & Tax Settings */}
-        <div className="settings-card">
+        <Card variant="settings">
           <h2>Billing & Tax Settings</h2>
           <div className="billing-group">
             <div className="form-group">
@@ -130,9 +133,9 @@ const SystemSettings = () => {
               <span className="setting-item-box-subtitle">Connect with insurance providers</span>
             </div>
           </div>
-        </div>
+        </Card>
         {/* Notification Settings */}
-        <div className="settings-card">
+        <Card variant="settings">
           <h2>Notification Settings</h2>
           <div className="notification-group">
             <div className="setting-item-box">
@@ -148,13 +151,13 @@ const SystemSettings = () => {
               <span className="setting-item-box-subtitle">Instant notifications for critical events</span>
             </div>
           </div>
-        </div>
+        </Card>
       </div>
       <div className="settings-actions">
-        <button className="btn-primary" onClick={handleSave}>
+        <Button variant="primary" onClick={handleSave}>
           <RiCheckLine size={18} /> Save All Settings
-        </button>
-        <button className="btn-secondary" onClick={handleReset}>Reset to Defaults</button>
+        </Button>
+        <Button variant="secondary" onClick={handleReset}>Reset to Defaults</Button>
       </div>
     </div>
   );

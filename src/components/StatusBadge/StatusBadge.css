@@ -1,0 +1,40 @@
+.utilization-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.utilization-badge.status-high { background-color: #DCFCE7; color: #16A34A; }
+.utilization-badge.status-medium { background-color: #FEE2E2; color: #EF4444; }
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.role-badge.admin { background-color: #DBEAFE; color: #1D4ED8; }
+.role-badge.doctor { background-color: #E0E7FF; color: #4338CA; }
+.role-badge.nurse { background-color: #FCE7F3; color: #BE185D; }
+.role-badge.pharmacist { background-color: #FEF3C7; color: #B45309; }
+.role-badge.lab { background-color: #F3E8FF; color: #7E22CE; }
+.role-badge.na { background-color: #F1F5F9; color: #64748B; }
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-badge.success { background-color: #DCFCE7; color: #00A63E; }
+.status-badge.failed { background-color: #FEE2E2; color: #E7000B; }
